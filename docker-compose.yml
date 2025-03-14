@@ -1,0 +1,15 @@
+services:
+  mariadb:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: toor
+      MYSQL_USER: apt
+      MYSQL_PASSWORD: apt
+      MYSQL_DATABASE: apt
+    ports:
+      - "3306:3306"
+    volumes:
+      - "mysql_data:/var/lib/mysql"
+
+volumes:
+  mysql_data:

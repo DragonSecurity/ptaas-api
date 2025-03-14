@@ -1,0 +1,35 @@
+core:
+  port: 9090
+  enable: true
+  workers: 1
+  secret: "secret"
+mysql:
+  host: 'localhost'
+  port: 3306
+  user: apt
+  pass: 'apt'
+  database: 'apt'
+  migrate: false
+migrate:
+  root: 'admin'
+  pass: '12345'
+  enable: true
+ai:
+  enable: true
+  method: "svm"
+  "limit": 10
+  "factor": 7
+scanner:
+  enable: true
+  defaults:
+    - "2fa"
+  command: "python3 scanner.py"
+  flags:
+    - "host"
+    - "endpoints"
+    - "type"
+    - "protocol"
+ftp:
+  host: 'http://localhost:9091'
+  secret: 'secret'
+  access: 'access'
